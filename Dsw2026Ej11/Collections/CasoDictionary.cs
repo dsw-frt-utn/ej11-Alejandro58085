@@ -15,7 +15,7 @@ public class CasoDictionary
     {
         alumnos.Add(legajo, alumno);
     }
-    public Alumno BuscarAlumno(int legajo)
+    public Alumno? BuscarAlumno(int legajo)
     {
         if (alumnos.ContainsKey(legajo))
         {

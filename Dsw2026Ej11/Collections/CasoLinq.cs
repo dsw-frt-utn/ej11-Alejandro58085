@@ -19,7 +19,7 @@ namespace Dsw2026Ej11.Collections;
 public class CasoLinq
 {
     private List<Libro> libros = new List<Libro>();
-    public void agregarLibro(Libro libro)
+    public void AgregarLibro(Libro libro)
     {
         libros.Add(libro);
     }
@@ -43,7 +43,7 @@ public class CasoLinq
     {
         return libros.Where(idMayor=> idMayor.Id> 15).ToList();
     }
-    public List<string> Getibros()
+    public List<string> GetLibros()
     {
         return libros.Select(libro=>$"{libro.Titulo}-{libro.Precio:C}").ToList();
     }
@@ -55,7 +55,7 @@ public class CasoLinq
     {
         return libros.MinBy(libro => libro.Precio);
     }
-    public List<Libro> GetMayorProedio()
+    public List<Libro> GetMayorPromedio()
     {
         decimal promedio = libros.Average(l => l.Precio);
         return libros.Where(libro => libro.Precio > promedio).ToList();
